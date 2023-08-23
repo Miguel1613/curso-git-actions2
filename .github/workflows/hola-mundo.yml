@@ -1,0 +1,12 @@
+name: hola-mundo #Nombre del workflow
+on: [push] #evento que lo activará
+jobs: #Definición de los jobs
+  hola-mundo: #Nombre del job
+    runs-on: ubuntu-latest #Maquina en la que correrá
+    steps: #Lista de steps del job hola-mundo
+      - name: Check #Nombre del step
+        id: check #identificador usable dentro del job para otros steps
+        uses: actions/checkout@v3
+      - name: Run
+        id: run
+        run: bash hola-mundo.sh
